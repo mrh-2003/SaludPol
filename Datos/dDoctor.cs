@@ -16,7 +16,7 @@ namespace Datos
         }
         public string insertarDoctor(eDoctor doctor)
         {
-            string insert = string.Format("insert into Doctor values ({0}, '{1}', '{2}', '{3}', {4}, {5}, {6})", doctor.nrocolegiatura, doctor.nombre, doctor.apellido, doctor.contra, doctor.telefono, doctor.especialidad.idespecialidad, doctor.nroquejas);
+            string insert = string.Format("insert into Doctor values ({0}, '{1}', '{2}', '{3}', {4}, {5}, {6})", doctor.nrocolegiatura, doctor.contra, doctor.nombre, doctor.apellido, doctor.telefono, doctor.especialidad.idespecialidad, doctor.nroquejas);
             return Insertar(insert);
         }
         public string actualizarDoctor(eDoctor doctor)
