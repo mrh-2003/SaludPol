@@ -44,64 +44,71 @@
             "Paciente",
             "Doctor",
             "Administrador"});
-            this.cbxTipoUsuario.Location = new System.Drawing.Point(380, 33);
+            this.cbxTipoUsuario.Location = new System.Drawing.Point(507, 41);
+            this.cbxTipoUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxTipoUsuario.Name = "cbxTipoUsuario";
-            this.cbxTipoUsuario.Size = new System.Drawing.Size(201, 21);
+            this.cbxTipoUsuario.Size = new System.Drawing.Size(267, 24);
             this.cbxTipoUsuario.TabIndex = 0;
             this.cbxTipoUsuario.SelectedIndexChanged += new System.EventHandler(this.cbxTipoUsuario_SelectedIndexChanged);
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(380, 70);
+            this.txtUsuario.Location = new System.Drawing.Point(507, 86);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(201, 20);
+            this.txtUsuario.Size = new System.Drawing.Size(267, 22);
             this.txtUsuario.TabIndex = 1;
             // 
             // lbTipoUsuario
             // 
             this.lbTipoUsuario.AutoSize = true;
-            this.lbTipoUsuario.Location = new System.Drawing.Point(301, 73);
+            this.lbTipoUsuario.Location = new System.Drawing.Point(401, 90);
+            this.lbTipoUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTipoUsuario.Name = "lbTipoUsuario";
-            this.lbTipoUsuario.Size = new System.Drawing.Size(35, 13);
+            this.lbTipoUsuario.Size = new System.Drawing.Size(44, 16);
             this.lbTipoUsuario.TabIndex = 3;
             this.lbTipoUsuario.Text = "label1";
             // 
             // txtContra
             // 
-            this.txtContra.Location = new System.Drawing.Point(380, 113);
+            this.txtContra.Location = new System.Drawing.Point(507, 139);
+            this.txtContra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(201, 20);
+            this.txtContra.Size = new System.Drawing.Size(267, 22);
             this.txtContra.TabIndex = 2;
             // 
             // lbContra
             // 
             this.lbContra.AutoSize = true;
-            this.lbContra.Location = new System.Drawing.Point(301, 120);
+            this.lbContra.Location = new System.Drawing.Point(401, 148);
+            this.lbContra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbContra.Name = "lbContra";
-            this.lbContra.Size = new System.Drawing.Size(67, 13);
+            this.lbContra.Size = new System.Drawing.Size(82, 16);
             this.lbContra.TabIndex = 4;
             this.lbContra.Text = "Contraseña :";
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(380, 160);
+            this.btnIngresar.Location = new System.Drawing.Point(507, 197);
+            this.btnIngresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnIngresar.Name = "btnIngresar";
-            this.btnIngresar.Size = new System.Drawing.Size(201, 23);
+            this.btnIngresar.Size = new System.Drawing.Size(268, 28);
             this.btnIngresar.TabIndex = 5;
             this.btnIngresar.Text = "Ingresar";
             this.btnIngresar.UseVisualStyleBackColor = true;
             // 
             // FrmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 212);
+            this.ClientSize = new System.Drawing.Size(832, 256);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.lbContra);
             this.Controls.Add(this.lbTipoUsuario);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.cbxTipoUsuario);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmLogin";
             this.Text = "SaludPol";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
