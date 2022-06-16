@@ -11,7 +11,7 @@ using Entidades;
 using Negocio;
 namespace Presentacion
 {
-    public partial class FrmDiagnosticosMasComunes : Form
+    public partial class RDiagnosticosMasComunes : Form
     {
         private nDiagnostico nDiagnostico = new nDiagnostico();
         int valorMasRepetido = -1;
@@ -19,7 +19,7 @@ namespace Presentacion
         List<string> Nombres = new List<string>();
         List<int> Valores = new List<int>();
 
-        public FrmDiagnosticosMasComunes()
+        public RDiagnosticosMasComunes()
         {
             InitializeComponent();
         }

@@ -11,12 +11,12 @@ using Negocio;
 using Entidades;
 namespace Presentacion
 {
-    public partial class FrmReporteTratamientos : Form
+    public partial class RTratamientos : Form
     {
         private nTratamientoCancer nTratamiento = new nTratamientoCancer();
         List<string> nombreTrata = new List<string>();
         List<int> numeropacientes = new List<int>();
-        public FrmReporteTratamientos()
+        public RTratamientos()
         {
 
             InitializeComponent();
