@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +52,12 @@
     </Compile>
     <Compile Include="FrmAdministrador.Designer.cs">
       <DependentUpon>FrmAdministrador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDiagnosticosMasComunes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDiagnosticosMasComunes.Designer.cs">
+      <DependentUpon>FrmDiagnosticosMasComunes.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDoctor.cs">
       <SubType>Form</SubType>
@@ -70,11 +77,23 @@
     <Compile Include="FrmPacientes.Designer.cs">
       <DependentUpon>FrmPacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteTratamientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteTratamientos.Designer.cs">
+      <DependentUpon>FrmReporteTratamientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="MCita.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MCita.Designer.cs">
       <DependentUpon>MCita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDiagnostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDiagnostico.Designer.cs">
+      <DependentUpon>MDiagnostico.cs</DependentUpon>
     </Compile>
     <Compile Include="MDoctor.cs">
       <SubType>Form</SubType>
@@ -94,8 +113,26 @@
     <Compile Include="MPacientes.Designer.cs">
       <DependentUpon>MPacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="MTratamientoCancer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MTratamientoCancer.Designer.cs">
+      <DependentUpon>MTratamientoCancer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RAfluencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RAfluencia.Designer.cs">
+      <DependentUpon>RAfluencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RListaDoctoresxEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RListaDoctoresxEspecialidad.Designer.cs">
+      <DependentUpon>RListaDoctoresxEspecialidad.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmAdministrador.resx">
       <DependentUpon>FrmAdministrador.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,6 +163,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RAfluencia.resx">
+      <DependentUpon>RAfluencia.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

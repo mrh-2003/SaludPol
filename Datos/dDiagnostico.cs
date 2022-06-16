@@ -16,7 +16,7 @@ namespace Datos
         }
         public string insertarDiagnostico(eDiagnostico diagnostico)
         {
-            string insert = string.Format("insert into Diagnostico values ({0}, '{1}')", diagnostico.iddiagnostico, diagnostico.nombre);
+            string insert = string.Format("insert into Diagnostico values ('{0}')", diagnostico.nombre);
             return Insertar(insert);
         }
         public string actualizarDiagnostico(eDiagnostico diagnostico)

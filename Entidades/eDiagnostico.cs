@@ -9,7 +9,8 @@ namespace Entidades
     public class eDiagnostico
     {
         public int iddiagnostico { get; set; }
-        public string nombre { get; set; } 
+        public string nombre { get; set; }
+        public int CantidadRepeticion { get; set; }
         public override string ToString()
         {
             return nombre;

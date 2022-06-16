@@ -16,11 +16,10 @@ namespace Negocio
         {
             datosDiag = new dDiagnostico();
         }
-        public string InsertarDiagnostico(int iddiagnostico, string nombre)
+        public string InsertarDiagnostico(string nombre)
         {
             eDiagnostico diagnostico = new eDiagnostico()
             {
-                iddiagnostico = iddiagnostico,
                 nombre = nombre
             };
             return datosDiag.insertarDiagnostico(diagnostico);
