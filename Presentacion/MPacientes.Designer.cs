@@ -47,9 +47,10 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(364, 322);
+            this.btnEliminar.Location = new System.Drawing.Point(273, 262);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(114, 41);
+            this.btnEliminar.Size = new System.Drawing.Size(86, 33);
             this.btnEliminar.TabIndex = 39;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -57,9 +58,10 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(209, 322);
+            this.btnModificar.Location = new System.Drawing.Point(157, 262);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(119, 41);
+            this.btnModificar.Size = new System.Drawing.Size(89, 33);
             this.btnModificar.TabIndex = 38;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -67,9 +69,10 @@
             // 
             // buttonRegistrar
             // 
-            this.buttonRegistrar.Location = new System.Drawing.Point(47, 322);
+            this.buttonRegistrar.Location = new System.Drawing.Point(35, 262);
+            this.buttonRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonRegistrar.Name = "buttonRegistrar";
-            this.buttonRegistrar.Size = new System.Drawing.Size(123, 41);
+            this.buttonRegistrar.Size = new System.Drawing.Size(92, 33);
             this.buttonRegistrar.TabIndex = 37;
             this.buttonRegistrar.Text = "Registrar";
             this.buttonRegistrar.UseVisualStyleBackColor = true;
@@ -77,100 +80,115 @@
             // 
             // dateTimePickerFechaPac
             // 
-            this.dateTimePickerFechaPac.Location = new System.Drawing.Point(252, 209);
+            this.dateTimePickerFechaPac.Location = new System.Drawing.Point(189, 170);
+            this.dateTimePickerFechaPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePickerFechaPac.Name = "dateTimePickerFechaPac";
-            this.dateTimePickerFechaPac.Size = new System.Drawing.Size(187, 22);
+            this.dateTimePickerFechaPac.Size = new System.Drawing.Size(141, 20);
             this.dateTimePickerFechaPac.TabIndex = 36;
             // 
             // textBoxTelefono
             // 
-            this.textBoxTelefono.Location = new System.Drawing.Point(252, 267);
+            this.textBoxTelefono.Location = new System.Drawing.Point(189, 217);
+            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxTelefono.Name = "textBoxTelefono";
-            this.textBoxTelefono.Size = new System.Drawing.Size(187, 22);
+            this.textBoxTelefono.Size = new System.Drawing.Size(141, 20);
             this.textBoxTelefono.TabIndex = 35;
+            this.textBoxTelefono.TextChanged += new System.EventHandler(this.textBoxTelefono_TextChanged);
             // 
             // textBoxApellidos
             // 
-            this.textBoxApellidos.Location = new System.Drawing.Point(252, 165);
+            this.textBoxApellidos.Location = new System.Drawing.Point(189, 134);
+            this.textBoxApellidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxApellidos.Name = "textBoxApellidos";
-            this.textBoxApellidos.Size = new System.Drawing.Size(187, 22);
+            this.textBoxApellidos.Size = new System.Drawing.Size(141, 20);
             this.textBoxApellidos.TabIndex = 34;
             // 
             // textBoxNombres
             // 
-            this.textBoxNombres.Location = new System.Drawing.Point(252, 122);
+            this.textBoxNombres.Location = new System.Drawing.Point(189, 99);
+            this.textBoxNombres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxNombres.Name = "textBoxNombres";
-            this.textBoxNombres.Size = new System.Drawing.Size(187, 22);
+            this.textBoxNombres.Size = new System.Drawing.Size(141, 20);
             this.textBoxNombres.TabIndex = 33;
             // 
             // textBoxDNI
             // 
-            this.textBoxDNI.Location = new System.Drawing.Point(252, 67);
+            this.textBoxDNI.Location = new System.Drawing.Point(189, 54);
+            this.textBoxDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDNI.Name = "textBoxDNI";
-            this.textBoxDNI.Size = new System.Drawing.Size(187, 22);
+            this.textBoxDNI.Size = new System.Drawing.Size(141, 20);
             this.textBoxDNI.TabIndex = 32;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(84, 209);
+            this.label5.Location = new System.Drawing.Point(63, 170);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 16);
+            this.label5.Size = new System.Drawing.Size(106, 13);
             this.label5.TabIndex = 31;
             this.label5.Text = "Fecha de nacimiento";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(84, 259);
+            this.label4.Location = new System.Drawing.Point(63, 210);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 16);
+            this.label4.Size = new System.Drawing.Size(49, 13);
             this.label4.TabIndex = 30;
             this.label4.Text = "Teléfono";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(84, 157);
+            this.label3.Location = new System.Drawing.Point(63, 128);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 16);
+            this.label3.Size = new System.Drawing.Size(49, 13);
             this.label3.TabIndex = 29;
             this.label3.Text = "Apellidos";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(84, 114);
+            this.label2.Location = new System.Drawing.Point(63, 93);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 16);
+            this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 28;
             this.label2.Text = "Nombres";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(82, 59);
+            this.label1.Location = new System.Drawing.Point(62, 48);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 16);
+            this.label1.Size = new System.Drawing.Size(26, 13);
             this.label1.TabIndex = 27;
             this.label1.Text = "DNI";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataPaciente
             // 
             this.dataPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataPaciente.Location = new System.Drawing.Point(47, 409);
+            this.dataPaciente.Location = new System.Drawing.Point(35, 332);
+            this.dataPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataPaciente.Name = "dataPaciente";
             this.dataPaciente.RowHeadersWidth = 51;
             this.dataPaciente.RowTemplate.Height = 24;
-            this.dataPaciente.Size = new System.Drawing.Size(417, 197);
+            this.dataPaciente.Size = new System.Drawing.Size(313, 160);
             this.dataPaciente.TabIndex = 40;
+            this.dataPaciente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPaciente_CellContentClick);
             this.dataPaciente.SelectionChanged += new System.EventHandler(this.dataPaciente_SelectionChanged);
             // 
             // MPacientes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(559, 641);
+            this.ClientSize = new System.Drawing.Size(419, 521);
             this.Controls.Add(this.dataPaciente);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -185,8 +203,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MPacientes";
             this.Text = "MPacientes";
+            this.Load += new System.EventHandler(this.MPacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataPaciente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

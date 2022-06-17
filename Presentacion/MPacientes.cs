@@ -101,5 +101,30 @@ namespace Presentacion
 
             }
         }
+
+        private void MPacientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTelefono_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataPaciente_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

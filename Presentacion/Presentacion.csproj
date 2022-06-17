@@ -53,6 +53,12 @@
     <Compile Include="FrmAdministrador.Designer.cs">
       <DependentUpon>FrmAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmQuejaPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuejaPaciente.Designer.cs">
+      <DependentUpon>FrmQuejaPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="RDiagnosticosMasComunes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,18 @@
     </Compile>
     <Compile Include="FrmPacientes.Designer.cs">
       <DependentUpon>FrmPacientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RMedicosMasActivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RMedicosMasActivos.Designer.cs">
+      <DependentUpon>RMedicosMasActivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RQuejasaDoctores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RQuejasaDoctores.Designer.cs">
+      <DependentUpon>RQuejasaDoctores.cs</DependentUpon>
     </Compile>
     <Compile Include="RTratamientos.cs">
       <SubType>Form</SubType>
@@ -154,6 +172,12 @@
     <EmbeddedResource Include="MEspecialidad.resx">
       <DependentUpon>MEspecialidad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MPacientes.resx">
+      <DependentUpon>MPacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MTratamientoCancer.resx">
+      <DependentUpon>MTratamientoCancer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -165,6 +189,12 @@
     </Compile>
     <EmbeddedResource Include="RAfluencia.resx">
       <DependentUpon>RAfluencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RListaDoctoresxEspecialidad.resx">
+      <DependentUpon>RListaDoctoresxEspecialidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RMedicosMasActivos.resx">
+      <DependentUpon>RMedicosMasActivos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
