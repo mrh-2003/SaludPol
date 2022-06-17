@@ -47,6 +47,7 @@
     <Compile Include="nDoctor.cs" />
     <Compile Include="nEspecialidad.cs" />
     <Compile Include="nPacientes.cs" />
+    <Compile Include="nQueja.cs" />
     <Compile Include="nTratamientoCancer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

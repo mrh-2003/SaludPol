@@ -33,5 +33,10 @@ namespace Presentacion
             chart1.Titles.Add("Numero de quejas de cada doctor");
             chart1.Series[0].Points.DataBindXY(ListaNombresDoctores, CantidadQuejas);
         }
+
+        private void btnDetalles_Click(object sender, EventArgs e)
+        {
+            (new RQuejasContenido()).ShowDialog();
+        }
     }
 }

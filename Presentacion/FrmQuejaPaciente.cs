@@ -24,12 +24,14 @@ namespace Presentacion
         nCita negcita = new nCita();
         nDoctor negdoctor = new nDoctor();
         nPacientes negpacientes = new nPacientes();
+        nQueja negqueja = new nQueja();
         private void FrmQuejaPaciente_Load(object sender, EventArgs e)
         {
             foreach (eDoctor doctor in negdoctor.ListarDoctores())
             {
                 comboBoxnombredoctores.Items.Add(doctor);
             }
+            
         }
         private void Limpiar()
         {
@@ -48,6 +50,7 @@ namespace Presentacion
                 }
                 if (quejavalida == true)
                 {
+                    negqueja.insertarQueja(itemdoctor.nrocolegiatura, textBoxquejaaingresar.Text);
                     Limpiar();
                     MessageBox.Show("Se registro exitosamente la queja al doctor " + itemdoctor.nombre + " " + itemdoctor.apellido);
                 }

@@ -48,6 +48,7 @@
     <Compile Include="dPacientes.cs" />
     <Compile Include="dDiagnostico.cs" />
     <Compile Include="dEspecialidad.cs" />
+    <Compile Include="dQuejas.cs" />
     <Compile Include="dTratamientoCancer.cs" />
     <Compile Include="MantenimientoDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -47,6 +47,7 @@
     <Compile Include="eDoctor.cs" />
     <Compile Include="eEspecialidad.cs" />
     <Compile Include="ePacientes.cs" />
+    <Compile Include="eQueja.cs" />
     <Compile Include="eTratamientoCancer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
