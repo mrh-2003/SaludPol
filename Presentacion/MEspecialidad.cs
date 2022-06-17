@@ -22,6 +22,7 @@ namespace Presentacion
             InitializeComponent();
             seleccionada = null;
             nespecialidad = new nEspecialidad();
+            CargarDatos();
         }
 
         public void CargarDatos()
@@ -40,6 +41,8 @@ namespace Presentacion
             if (txtnombre.Text != "")
             {
                 MessageBox.Show(nespecialidad.RegistrarEspecialidad(txtnombre.Text));
+                CargarDatos();
+                LimpiarCajas();
             }
             else
             {
@@ -74,7 +77,7 @@ namespace Presentacion
             {
                 if (txtid.Text != "" && txtnombre.Text != "")
                 {
-                    MessageBox.Show(nespecialidad.Modificar(seleccionada.idespecialidad, seleccionada.nombre));
+                    MessageBox.Show(nespecialidad.Modificar(seleccionada.idespecialidad, txtnombre.Text));
                     CargarDatos();
                     LimpiarCajas();
                 }

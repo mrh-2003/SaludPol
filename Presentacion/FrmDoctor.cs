@@ -50,6 +50,11 @@ namespace Presentacion
                 }
             }
         }
+        private void btnDiag_Click(object sender, EventArgs e)
+        {
+            (new MDiagnostico()).ShowDialog();
+        }
+
 
         private void dataPaciente_SelectionChanged(object sender, EventArgs e)
         {
@@ -62,6 +67,7 @@ namespace Presentacion
                 textBoxTelefono.Text = pacienteseleccionado.telefono.ToString();
                 dateTimePickerFechaPac.Text = pacienteseleccionado.fechadenacimiento.ToShortDateString();
             }
+            desactivarPanel1();
         }
         void cargarTratamientos()
         {
@@ -70,6 +76,11 @@ namespace Presentacion
         private void FrmDoctor_Load(object sender, EventArgs e)
         {
             cargarTratamientos();
+            mostrarpacientes();
+        }
+
+        void desactivarPanel1()
+        {
             if (datosCitas.ListarCita().Exists(cita => cita.paciente.dnipaciente == pacienteseleccionado.dnipaciente && cita.diagnostico.nombre == "Cancer"))
                 splitContainer1.Panel1.Enabled = true;
             else
@@ -89,7 +100,7 @@ namespace Presentacion
             {
                 if (cbxPacienteCurado.Text == "Si")
                 {
-                    (new nTratamientoCancer()).ActualizarTratamiento(tratamiento.idtratamiento, (new nTratamientoCancer()).ListarTratamientos().Find(trat => trat.idtratamiento == tratamiento.idtratamiento).nropaccurados + 1, cbxPacienteCurado.Text);
+                    (new nTratamientoCancer()).ActualizarTratamiento(tratamiento.idtratamiento, (new nTratamientoCancer()).ListarTratamientos().Find(trat => trat.idtratamiento == tratamiento.idtratamiento).nropaccurados + 1, cbxTratamientos.Text);
                     limpiarTratamientos();
                 }
             }

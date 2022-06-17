@@ -49,11 +49,10 @@ namespace Presentacion
                 if (valorMasRepetido == diag.CantidadRepeticion)
                 {
                     Nombres.Add(diag.nombre);
-
+                    Valores.Add(valorMasRepetido);
                 }
-
             }
-            Valores.Add(valorMasRepetido);
+            
             chart1.Titles.Add("Diagnosticos más comunes");
             chart1.Series[0].Points.DataBindXY(Nombres, Valores);
         }

@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.cbxPacienteCurado = new System.Windows.Forms.ComboBox();
+            this.cbxTratamientos = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.dataPaciente = new System.Windows.Forms.DataGridView();
             this.btnModificar = new System.Windows.Forms.Button();
             this.dateTimePickerFechaPac = new System.Windows.Forms.DateTimePicker();
@@ -41,11 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbxTratamientos = new System.Windows.Forms.ComboBox();
-            this.cbxPacienteCurado = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnDiag = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -70,6 +71,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataPaciente);
+            this.splitContainer1.Panel2.Controls.Add(this.btnDiag);
             this.splitContainer1.Panel2.Controls.Add(this.btnModificar);
             this.splitContainer1.Panel2.Controls.Add(this.dateTimePickerFechaPac);
             this.splitContainer1.Panel2.Controls.Add(this.textBoxTelefono);
@@ -81,9 +83,58 @@
             this.splitContainer1.Panel2.Controls.Add(this.label3);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.label6);
-            this.splitContainer1.Size = new System.Drawing.Size(800, 435);
-            this.splitContainer1.SplitterDistance = 358;
+            this.splitContainer1.Size = new System.Drawing.Size(800, 517);
+            this.splitContainer1.SplitterDistance = 295;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Location = new System.Drawing.Point(113, 127);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.TabIndex = 43;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
+            // cbxPacienteCurado
+            // 
+            this.cbxPacienteCurado.FormattingEnabled = true;
+            this.cbxPacienteCurado.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.cbxPacienteCurado.Location = new System.Drawing.Point(157, 76);
+            this.cbxPacienteCurado.Name = "cbxPacienteCurado";
+            this.cbxPacienteCurado.Size = new System.Drawing.Size(121, 21);
+            this.cbxPacienteCurado.TabIndex = 1;
+            // 
+            // cbxTratamientos
+            // 
+            this.cbxTratamientos.FormattingEnabled = true;
+            this.cbxTratamientos.Location = new System.Drawing.Point(157, 38);
+            this.cbxTratamientos.Name = "cbxTratamientos";
+            this.cbxTratamientos.Size = new System.Drawing.Size(121, 21);
+            this.cbxTratamientos.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(27, 79);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 13);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Paciente curado";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(27, 41);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 13);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "Nombre tratamiento";
             // 
             // dataPaciente
             // 
@@ -99,7 +150,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(185, 217);
+            this.btnModificar.Location = new System.Drawing.Point(188, 217);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 33);
@@ -198,60 +249,22 @@
             this.label6.TabIndex = 41;
             this.label6.Text = "DNI";
             // 
-            // cbxTratamientos
+            // btnDiag
             // 
-            this.cbxTratamientos.FormattingEnabled = true;
-            this.cbxTratamientos.Location = new System.Drawing.Point(157, 38);
-            this.cbxTratamientos.Name = "cbxTratamientos";
-            this.cbxTratamientos.Size = new System.Drawing.Size(121, 21);
-            this.cbxTratamientos.TabIndex = 0;
-            // 
-            // cbxPacienteCurado
-            // 
-            this.cbxPacienteCurado.FormattingEnabled = true;
-            this.cbxPacienteCurado.Items.AddRange(new object[] {
-            "Si",
-            "No"});
-            this.cbxPacienteCurado.Location = new System.Drawing.Point(157, 76);
-            this.cbxPacienteCurado.Name = "cbxPacienteCurado";
-            this.cbxPacienteCurado.Size = new System.Drawing.Size(121, 21);
-            this.cbxPacienteCurado.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(27, 41);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(99, 13);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "Nombre tratamiento";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(27, 79);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(85, 13);
-            this.label8.TabIndex = 42;
-            this.label8.Text = "Paciente curado";
-            // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Location = new System.Drawing.Point(113, 127);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
-            this.btnRegistrar.TabIndex = 43;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.btnDiag.Location = new System.Drawing.Point(113, 439);
+            this.btnDiag.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDiag.Name = "btnDiag";
+            this.btnDiag.Size = new System.Drawing.Size(234, 67);
+            this.btnDiag.TabIndex = 51;
+            this.btnDiag.Text = "Mantenimiento de Diagnostico";
+            this.btnDiag.UseVisualStyleBackColor = true;
+            this.btnDiag.Click += new System.EventHandler(this.btnDiag_Click);
             // 
             // FrmDoctor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 435);
+            this.ClientSize = new System.Drawing.Size(800, 517);
             this.Controls.Add(this.splitContainer1);
             this.Name = "FrmDoctor";
             this.Text = "FrmDoctor";
@@ -287,5 +300,6 @@
         private System.Windows.Forms.ComboBox cbxTratamientos;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnDiag;
     }
 }

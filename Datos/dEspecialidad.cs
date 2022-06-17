@@ -15,12 +15,12 @@ namespace Datos
       }
       public string insertEspecialidad(eEspecialidad especialidad)
       {
-          string insert = string.Format("insert into Especialidad values({0},'{1}')", especialidad.idespecialidad, especialidad.nombre);
+          string insert = string.Format("insert into Especialidad values('{0}')", especialidad.nombre);
           return Insertar(insert);
       }
       public string actualizarEspecialidad(eEspecialidad especialidad)
       {
-            string update = string.Format("update Especialidad set idespecialidad={0} nombre='{1}'", especialidad.idespecialidad, especialidad.nombre);
+            string update = string.Format("update Especialidad set nombre='{0}' where idespecialidad={1}", especialidad.nombre, especialidad.idespecialidad);
             return Actualizar(update);
       }
       public string eliminarEspecialidad(int idespe)

@@ -21,7 +21,7 @@ namespace Datos
         }
         public string actualizarTratamiento(eTratamientoCancer obj)
         {
-            string update = string.Format("update TratamientoCancer set idtratamiento = {0},nropaccurados = {1}, nombre = '{2}'}", obj.idtratamiento, obj.nropaccurados, obj.nombre);
+            string update = string.Format("update TratamientoCancer set nropaccurados = {0}, nombre = '{1}' where idtratamiento = {2}", obj.nropaccurados, obj.nombre, obj.idtratamiento);
             return Actualizar(update);
         }
         public string eliminarTratamiento(int idtratamiento)
