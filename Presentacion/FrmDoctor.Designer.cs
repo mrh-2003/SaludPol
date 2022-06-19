@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.cbxPacienteCurado = new System.Windows.Forms.ComboBox();
             this.cbxTratamientos = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dataPaciente = new System.Windows.Forms.DataGridView();
+            this.btnDiag = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.dateTimePickerFechaPac = new System.Windows.Forms.DateTimePicker();
             this.textBoxTelefono = new System.Windows.Forms.TextBox();
@@ -46,7 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnDiag = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -62,6 +63,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.btnRegistrar);
             this.splitContainer1.Panel1.Controls.Add(this.cbxPacienteCurado);
             this.splitContainer1.Panel1.Controls.Add(this.cbxTratamientos);
@@ -86,6 +88,16 @@
             this.splitContainer1.Size = new System.Drawing.Size(800, 517);
             this.splitContainer1.SplitterDistance = 295;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(2, 177);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(283, 13);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "falta poner que el doctor registre diagnostico de pacientes ";
             // 
             // btnRegistrar
             // 
@@ -139,7 +151,7 @@
             // dataPaciente
             // 
             this.dataPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataPaciente.Location = new System.Drawing.Point(61, 264);
+            this.dataPaciente.Location = new System.Drawing.Point(113, 264);
             this.dataPaciente.Margin = new System.Windows.Forms.Padding(2);
             this.dataPaciente.Name = "dataPaciente";
             this.dataPaciente.RowHeadersWidth = 51;
@@ -147,6 +159,17 @@
             this.dataPaciente.Size = new System.Drawing.Size(313, 160);
             this.dataPaciente.TabIndex = 52;
             this.dataPaciente.SelectionChanged += new System.EventHandler(this.dataPaciente_SelectionChanged);
+            // 
+            // btnDiag
+            // 
+            this.btnDiag.Location = new System.Drawing.Point(113, 439);
+            this.btnDiag.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDiag.Name = "btnDiag";
+            this.btnDiag.Size = new System.Drawing.Size(234, 67);
+            this.btnDiag.TabIndex = 51;
+            this.btnDiag.Text = "Mantenimiento de Diagnostico";
+            this.btnDiag.UseVisualStyleBackColor = true;
+            this.btnDiag.Click += new System.EventHandler(this.btnDiag_Click);
             // 
             // btnModificar
             // 
@@ -212,7 +235,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(90, 177);
+            this.label4.Location = new System.Drawing.Point(90, 184);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 13);
@@ -242,23 +265,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(89, 15);
+            this.label6.Location = new System.Drawing.Point(90, 24);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 13);
             this.label6.TabIndex = 41;
             this.label6.Text = "DNI";
-            // 
-            // btnDiag
-            // 
-            this.btnDiag.Location = new System.Drawing.Point(113, 439);
-            this.btnDiag.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDiag.Name = "btnDiag";
-            this.btnDiag.Size = new System.Drawing.Size(234, 67);
-            this.btnDiag.TabIndex = 51;
-            this.btnDiag.Text = "Mantenimiento de Diagnostico";
-            this.btnDiag.UseVisualStyleBackColor = true;
-            this.btnDiag.Click += new System.EventHandler(this.btnDiag_Click);
             // 
             // FrmDoctor
             // 
@@ -301,5 +313,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnDiag;
+        private System.Windows.Forms.Label label1;
     }
 }

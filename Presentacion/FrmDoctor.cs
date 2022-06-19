@@ -18,12 +18,14 @@ namespace Presentacion
         ePacientes pacienteseleccionado;
         nPacientes gp;
         nCita datosCitas;
-        public FrmDoctor()
+        int nrocol;
+        public FrmDoctor(int nrocol)
         {
             InitializeComponent();
             pacienteseleccionado = null;
             gp = new nPacientes();
             datosCitas = new nCita();
+            this.nrocol = nrocol;
         }
 
         void mostrarpacientes()

@@ -61,7 +61,7 @@ namespace Presentacion
                 case "Paciente":
                     if (pacientes.Exists(valor => valor.dnipaciente == Convert.ToInt32(txtUsuario.Text)))
                     {
-                        (new FrmPacientes()).ShowDialog();
+                        (new FrmPacientes(Convert.ToInt32(txtUsuario.Text))).ShowDialog();
                     } else
                     {
                         MessageBox.Show("Usuario no encontrado");
@@ -70,7 +70,7 @@ namespace Presentacion
                 case "Doctor": 
                     if (doctores.Exists(valor => valor.contra == txtContra.Text && valor.nrocolegiatura == Convert.ToInt32(txtUsuario.Text)))
                     {
-                        (new FrmDoctor()).ShowDialog();
+                        (new FrmDoctor(Convert.ToInt32(txtUsuario.Text))).ShowDialog();
                     }
                     else
                     {

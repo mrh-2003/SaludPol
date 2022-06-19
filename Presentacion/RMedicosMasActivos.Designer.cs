@@ -37,6 +37,7 @@
             // 
             // graficaMedicos
             // 
+            chartArea1.AxisX.IntervalAutoMode = System.Windows.Forms.DataVisualization.Charting.IntervalAutoMode.VariableCount;
             chartArea1.Name = "ChartArea1";
             this.graficaMedicos.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
