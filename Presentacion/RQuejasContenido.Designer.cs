@@ -43,6 +43,7 @@
             // 
             // lsQuejas
             // 
+            this.lsQuejas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.lsQuejas.FormattingEnabled = true;
             this.lsQuejas.Location = new System.Drawing.Point(24, 69);
             this.lsQuejas.Name = "lsQuejas";
@@ -53,9 +54,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Presentacion.Properties.Resources.fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lsQuejas);
             this.Controls.Add(this.cbxDoctor);
+            this.DoubleBuffered = true;
             this.Name = "RQuejasContenido";
             this.Text = "RQuejasContenido";
             this.Load += new System.EventHandler(this.RQuejasContenido_Load);

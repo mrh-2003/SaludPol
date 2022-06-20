@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnQueja = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.cbxMinutos = new System.Windows.Forms.ComboBox();
@@ -44,47 +41,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarCitas)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // btnQueja
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(750, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ingresar cita \r\n\r\nPoner queja";
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Location = new System.Drawing.Point(127, 385);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(55, 23);
-            this.btnLimpiar.TabIndex = 18;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            // 
-            // btnActualizar
-            // 
-            this.btnActualizar.Location = new System.Drawing.Point(143, 219);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(55, 23);
-            this.btnActualizar.TabIndex = 19;
-            this.btnActualizar.Text = "Actualizar";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(219, 219);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(55, 23);
-            this.btnEliminar.TabIndex = 20;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnQueja.Location = new System.Drawing.Point(95, 298);
+            this.btnQueja.Name = "btnQueja";
+            this.btnQueja.Size = new System.Drawing.Size(174, 52);
+            this.btnQueja.TabIndex = 18;
+            this.btnQueja.Text = "Insertar queja";
+            this.btnQueja.UseVisualStyleBackColor = true;
+            this.btnQueja.Click += new System.EventHandler(this.btnQueja_Click);
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Location = new System.Drawing.Point(60, 219);
+            this.btnRegistrar.Location = new System.Drawing.Point(114, 217);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(55, 23);
+            this.btnRegistrar.Size = new System.Drawing.Size(85, 32);
             this.btnRegistrar.TabIndex = 21;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -117,9 +88,11 @@
             this.cbxNCole.Name = "cbxNCole";
             this.cbxNCole.Size = new System.Drawing.Size(145, 21);
             this.cbxNCole.TabIndex = 12;
+            this.cbxNCole.SelectedIndexChanged += new System.EventHandler(this.cbxNCole_SelectedIndexChanged);
             // 
             // cbxDoctor
             // 
+            this.cbxDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.cbxDoctor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxDoctor.FormattingEnabled = true;
             this.cbxDoctor.Items.AddRange(new object[] {
@@ -128,6 +101,7 @@
             this.cbxDoctor.Name = "cbxDoctor";
             this.cbxDoctor.Size = new System.Drawing.Size(145, 21);
             this.cbxDoctor.TabIndex = 13;
+            this.cbxDoctor.SelectedIndexChanged += new System.EventHandler(this.cbxDoctor_SelectedIndexChanged);
             // 
             // cbxHora
             // 
@@ -157,6 +131,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(15, 19);
             this.label2.Name = "label2";
@@ -175,20 +150,20 @@
             // dgvListarCitas
             // 
             this.dgvListarCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListarCitas.Location = new System.Drawing.Point(345, 19);
+            this.dgvListarCitas.Location = new System.Drawing.Point(356, 19);
             this.dgvListarCitas.Name = "dgvListarCitas";
             this.dgvListarCitas.ReadOnly = true;
-            this.dgvListarCitas.Size = new System.Drawing.Size(399, 389);
+            this.dgvListarCitas.Size = new System.Drawing.Size(399, 315);
             this.dgvListarCitas.TabIndex = 6;
             // 
             // FrmPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(819, 444);
-            this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.btnActualizar);
-            this.Controls.Add(this.btnEliminar);
+            this.BackgroundImage = global::Presentacion.Properties.Resources.fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(819, 362);
+            this.Controls.Add(this.btnQueja);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.cbxMinutos);
@@ -198,9 +173,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtIDcita);
             this.Controls.Add(this.dgvListarCitas);
-            this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "FrmPacientes";
             this.Text = "FrmPacientes";
+            this.Load += new System.EventHandler(this.FrmPacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListarCitas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -208,11 +184,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Button btnActualizar;
-        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnQueja;
         private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.DateTimePicker dtpFecha;
         private System.Windows.Forms.ComboBox cbxMinutos;

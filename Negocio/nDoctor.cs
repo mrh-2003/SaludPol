@@ -15,7 +15,7 @@ namespace Negocio
         {
             datosdoctor = new dDoctor();
         }
-        public string InsertarDoctor(int nrocoleg,string name, string lastname, string password, int telef, int idespecial, int nroque)
+        public string InsertarDoctor(int nrocoleg,string name, string lastname, string password, int telef, int idespecial)
         {
             eEspecialidad especialidad = new eEspecialidad()
             {
@@ -28,12 +28,11 @@ namespace Negocio
                 apellido=lastname,
                 contra=password,
                 telefono=telef,
-                especialidad=especialidad,
-                nroquejas=nroque
+                especialidad=especialidad
             };
             return datosdoctor.insertarDoctor(template);
         }
-        public string ActualizarDoctor(int nrocoleg, string name, string lastname, string password, int telef, int idespecial, int nroque)
+        public string ActualizarDoctor(int nrocoleg, string name, string lastname, string password, int telef, int idespecial)
         {
             eEspecialidad especialidad = new eEspecialidad()
             {
@@ -46,8 +45,7 @@ namespace Negocio
                 apellido = lastname,
                 contra = password,
                 telefono = telef,
-                especialidad = especialidad,
-                nroquejas = nroque
+                especialidad = especialidad
             };
             return datosdoctor.actualizarDoctor(template);
         }

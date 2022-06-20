@@ -51,6 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(53, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 13);
@@ -60,6 +61,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(53, 126);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
@@ -69,6 +71,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(53, 166);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
@@ -78,6 +81,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(53, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
@@ -87,6 +91,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(53, 250);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
@@ -96,6 +101,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(53, 291);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
@@ -104,6 +110,7 @@
             // 
             // textBoxcolegiatura
             // 
+            this.textBoxcolegiatura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.textBoxcolegiatura.Location = new System.Drawing.Point(215, 80);
             this.textBoxcolegiatura.Name = "textBoxcolegiatura";
             this.textBoxcolegiatura.Size = new System.Drawing.Size(114, 20);
@@ -111,6 +118,7 @@
             // 
             // textBoxnombre
             // 
+            this.textBoxnombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.textBoxnombre.Location = new System.Drawing.Point(215, 119);
             this.textBoxnombre.Name = "textBoxnombre";
             this.textBoxnombre.Size = new System.Drawing.Size(114, 20);
@@ -118,6 +126,7 @@
             // 
             // textBoxapellido
             // 
+            this.textBoxapellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.textBoxapellido.Location = new System.Drawing.Point(215, 163);
             this.textBoxapellido.Name = "textBoxapellido";
             this.textBoxapellido.Size = new System.Drawing.Size(114, 20);
@@ -125,6 +134,7 @@
             // 
             // textBoxcontra
             // 
+            this.textBoxcontra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.textBoxcontra.Location = new System.Drawing.Point(215, 205);
             this.textBoxcontra.Name = "textBoxcontra";
             this.textBoxcontra.Size = new System.Drawing.Size(114, 20);
@@ -132,6 +142,7 @@
             // 
             // textBoxtelef
             // 
+            this.textBoxtelef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.textBoxtelef.Location = new System.Drawing.Point(215, 247);
             this.textBoxtelef.Name = "textBoxtelef";
             this.textBoxtelef.Size = new System.Drawing.Size(114, 20);
@@ -202,6 +213,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Presentacion.Properties.Resources.fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(879, 379);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -220,6 +233,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.Name = "MDoctor";
             this.Text = "MDoctor";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewdoctor)).EndInit();

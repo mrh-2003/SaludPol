@@ -15,8 +15,9 @@ namespace Presentacion
     public partial class RQuejasaDoctores : Form
     {
         nDoctor negdoctor = new nDoctor();
+        nQueja negqueja = new nQueja();
         List<string> ListaNombresDoctores = new List<string>();
-        List<string> CantidadQuejas = new List<string>();
+        List<int> CantidadQuejas = new List<int>();
 
         public RQuejasaDoctores()
         {
@@ -28,7 +29,7 @@ namespace Presentacion
             foreach (eDoctor doctor in negdoctor.ListarDoctores())
             {
                 ListaNombresDoctores.Add(doctor.nombre);
-                CantidadQuejas.Add(doctor.nroquejas.ToString());
+                CantidadQuejas.Add(negqueja.listarQuejas().FindAll(x => x.nrocolegiatura == doctor.nrocolegiatura).Count);
             }
             chart1.Titles.Add("Numero de quejas de cada doctor");
             chart1.Series[0].Points.DataBindXY(ListaNombresDoctores, CantidadQuejas);

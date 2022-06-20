@@ -15,62 +15,28 @@ namespace Presentacion
 {
     public partial class FrmDoctor : Form
     {
-        ePacientes pacienteseleccionado;
-        nPacientes gp;
+        eCita citaseleccionado;
         nCita datosCitas;
         int nrocol;
         public FrmDoctor(int nrocol)
         {
             InitializeComponent();
-            pacienteseleccionado = null;
-            gp = new nPacientes();
+            citaseleccionado = null;
             datosCitas = new nCita();
             this.nrocol = nrocol;
         }
 
-        void mostrarpacientes()
+        void mostrarcita()
         {
-            dataPaciente.DataSource =  gp.ListarPacientes();
+            dataCita.DataSource =  datosCitas.ListarCita();
         }
         void limpiar()
         {
             textBoxNombres.Clear();
             textBoxApellidos.Clear();
-            textBoxTelefono.Clear();
             textBoxDNI.Clear();
-            dateTimePickerFechaPac.Text = ""; 
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            if (pacienteseleccionado != null)
-            {
-                if (textBoxNombres.Text != "" && textBoxDNI.Text != "" && textBoxApellidos.Text != "" && textBoxTelefono.Text != "" && dateTimePickerFechaPac.Text != "")
-                {
-                    MessageBox.Show(gp.ActualizarPacientes(pacienteseleccionado.dnipaciente, textBoxNombres.Text, textBoxApellidos.Text, pacienteseleccionado.fechadenacimiento, Convert.ToInt32(textBoxTelefono.Text)));
-                    mostrarpacientes();
-                }
-            }
-        }
-        private void btnDiag_Click(object sender, EventArgs e)
-        {
-            (new MDiagnostico()).ShowDialog();
-        }
-
-
-        private void dataPaciente_SelectionChanged(object sender, EventArgs e)
-        {
-            pacienteseleccionado = (ePacientes)dataPaciente.CurrentRow.DataBoundItem;
-            if (pacienteseleccionado != null)
-            {
-                textBoxDNI.Text = pacienteseleccionado.dnipaciente.ToString();
-                textBoxNombres.Text = pacienteseleccionado.nombre;
-                textBoxApellidos.Text = pacienteseleccionado.apellido;
-                textBoxTelefono.Text = pacienteseleccionado.telefono.ToString();
-                dateTimePickerFechaPac.Text = pacienteseleccionado.fechadenacimiento.ToShortDateString();
-            }
-            desactivarPanel1();
-        }
         void cargarTratamientos()
         {
             cbxTratamientos.DataSource = (new nTratamientoCancer()).ListarTratamientos();
@@ -78,15 +44,15 @@ namespace Presentacion
         private void FrmDoctor_Load(object sender, EventArgs e)
         {
             cargarTratamientos();
-            mostrarpacientes();
+            mostrarcita();
         }
 
         void desactivarPanel1()
         {
             if (datosCitas.ListarCita().Exists(cita => cita.paciente.dnipaciente == pacienteseleccionado.dnipaciente && cita.diagnostico.nombre == "Cancer"))
-                splitContainer1.Panel1.Enabled = true;
+                pnlCancer.Enabled = true;
             else
-                splitContainer1.Panel1.Enabled = false;
+                pnlCancer.Enabled = false;
         }
 
         void limpiarTratamientos()
@@ -111,5 +77,46 @@ namespace Presentacion
                 MessageBox.Show("Debes llenar todo los espacios");
             }
         }
+
+        private void dataPaciente_SelectionChanged(object sender, EventArgs e)
+        {
+            citaseleccionado = (eCita)dataCita.CurrentRow.DataBoundItem;
+            if (citaseleccionado != null)
+            {
+                textBoxDNI.Text = citaseleccionado.paciente.dnipaciente.ToString();
+                textBoxNombres.Text = citaseleccionado.paciente.nombre;
+                textBoxApellidos.Text = citaseleccionado.paciente.apellido;
+            }
+            desactivarPanel1();
+        }
+
+        private void btnDiag_Click(object sender, EventArgs e)
+        {
+            (new MDiagnostico()).ShowDialog();
+        }
+
+        private void btnRegistrarDiag_Click(object sender, EventArgs e)
+        {
+            if (citaseleccionado != null)
+            {
+                if (cbxDiagnos.SelectedIndex != - 1)
+                {
+                    MessageBox.Show(datosCitas.ActualizarCita());
+                    mostrarcita();
+                }
+            }
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (citaseleccionado != null)
+            {
+                if (textBoxNombres.Text != "" && textBoxDNI.Text != "" && textBoxApellidos.Text != "" )
+                {
+                    MessageBox.Show(gp.ActualizarPacientes(citaseleccionado.dnipaciente, textBoxNombres.Text, textBoxApellidos.Text, citaseleccionado.fechadenacimiento, Convert.ToInt32(textBoxTelefono.Text)));
+                    mostrarcita();
+                }
+            }
+        }        
     }
 }

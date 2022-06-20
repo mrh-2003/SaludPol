@@ -14,7 +14,6 @@ namespace Entidades
         public string contra { get; set; }
         public int telefono { get; set; }
         public eEspecialidad especialidad { get; set; }
-        public int nroquejas { get; set; }
         public eDoctor()
         {
             especialidad = new eEspecialidad();

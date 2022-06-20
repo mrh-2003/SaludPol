@@ -169,8 +169,14 @@
     <EmbeddedResource Include="FrmPacientes.resx">
       <DependentUpon>FrmPacientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuejaPaciente.resx">
+      <DependentUpon>FrmQuejaPaciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MCita.resx">
       <DependentUpon>MCita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDiagnostico.resx">
+      <DependentUpon>MDiagnostico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDoctor.resx">
       <DependentUpon>MDoctor.cs</DependentUpon>
@@ -192,9 +198,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RAfluencia.resx">
       <DependentUpon>RAfluencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDiagnosticosMasComunes.resx">
+      <DependentUpon>RDiagnosticosMasComunes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RListaDoctoresxEspecialidad.resx">
       <DependentUpon>RListaDoctoresxEspecialidad.cs</DependentUpon>
@@ -207,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RQuejasContenido.resx">
       <DependentUpon>RQuejasContenido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RTratamientos.resx">
+      <DependentUpon>RTratamientos.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -230,6 +243,15 @@
       <Project>{d40f1f16-15df-4fe6-89e2-8a1eb49419ca}</Project>
       <Name>Negocio</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\escudo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\logosaludpol.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

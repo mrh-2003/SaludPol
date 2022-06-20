@@ -48,7 +48,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Location = new System.Drawing.Point(273, 262);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(86, 33);
             this.btnEliminar.TabIndex = 39;
@@ -59,7 +59,7 @@
             // btnModificar
             // 
             this.btnModificar.Location = new System.Drawing.Point(157, 262);
-            this.btnModificar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnModificar.Margin = new System.Windows.Forms.Padding(2);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(89, 33);
             this.btnModificar.TabIndex = 38;
@@ -70,7 +70,7 @@
             // buttonRegistrar
             // 
             this.buttonRegistrar.Location = new System.Drawing.Point(35, 262);
-            this.buttonRegistrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonRegistrar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRegistrar.Name = "buttonRegistrar";
             this.buttonRegistrar.Size = new System.Drawing.Size(92, 33);
             this.buttonRegistrar.TabIndex = 37;
@@ -81,15 +81,16 @@
             // dateTimePickerFechaPac
             // 
             this.dateTimePickerFechaPac.Location = new System.Drawing.Point(189, 170);
-            this.dateTimePickerFechaPac.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerFechaPac.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerFechaPac.Name = "dateTimePickerFechaPac";
             this.dateTimePickerFechaPac.Size = new System.Drawing.Size(141, 20);
             this.dateTimePickerFechaPac.TabIndex = 36;
             // 
             // textBoxTelefono
             // 
+            this.textBoxTelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.textBoxTelefono.Location = new System.Drawing.Point(189, 217);
-            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTelefono.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTelefono.Name = "textBoxTelefono";
             this.textBoxTelefono.Size = new System.Drawing.Size(141, 20);
             this.textBoxTelefono.TabIndex = 35;
@@ -97,24 +98,27 @@
             // 
             // textBoxApellidos
             // 
+            this.textBoxApellidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.textBoxApellidos.Location = new System.Drawing.Point(189, 134);
-            this.textBoxApellidos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxApellidos.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxApellidos.Name = "textBoxApellidos";
             this.textBoxApellidos.Size = new System.Drawing.Size(141, 20);
             this.textBoxApellidos.TabIndex = 34;
             // 
             // textBoxNombres
             // 
+            this.textBoxNombres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.textBoxNombres.Location = new System.Drawing.Point(189, 99);
-            this.textBoxNombres.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxNombres.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNombres.Name = "textBoxNombres";
             this.textBoxNombres.Size = new System.Drawing.Size(141, 20);
             this.textBoxNombres.TabIndex = 33;
             // 
             // textBoxDNI
             // 
+            this.textBoxDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.textBoxDNI.Location = new System.Drawing.Point(189, 54);
-            this.textBoxDNI.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxDNI.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(141, 20);
             this.textBoxDNI.TabIndex = 32;
@@ -122,6 +126,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(63, 170);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
@@ -132,6 +137,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(63, 210);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -143,6 +149,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(63, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
@@ -153,6 +160,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(63, 93);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -163,6 +171,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(62, 48);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -175,7 +184,7 @@
             // 
             this.dataPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataPaciente.Location = new System.Drawing.Point(35, 332);
-            this.dataPaciente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataPaciente.Margin = new System.Windows.Forms.Padding(2);
             this.dataPaciente.Name = "dataPaciente";
             this.dataPaciente.RowHeadersWidth = 51;
             this.dataPaciente.RowTemplate.Height = 24;
@@ -188,6 +197,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Presentacion.Properties.Resources.fondo;
             this.ClientSize = new System.Drawing.Size(419, 521);
             this.Controls.Add(this.dataPaciente);
             this.Controls.Add(this.btnEliminar);
@@ -203,7 +213,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MPacientes";
             this.Text = "MPacientes";
             this.Load += new System.EventHandler(this.MPacientes_Load);

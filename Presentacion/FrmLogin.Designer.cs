@@ -34,10 +34,13 @@
             this.txtContra = new System.Windows.Forms.TextBox();
             this.lbContra = new System.Windows.Forms.Label();
             this.btnIngresar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxTipoUsuario
             // 
+            this.cbxTipoUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.cbxTipoUsuario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTipoUsuario.FormattingEnabled = true;
             this.cbxTipoUsuario.Items.AddRange(new object[] {
@@ -52,6 +55,7 @@
             // 
             // txtUsuario
             // 
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.txtUsuario.Location = new System.Drawing.Point(380, 70);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(201, 20);
@@ -60,14 +64,17 @@
             // lbTipoUsuario
             // 
             this.lbTipoUsuario.AutoSize = true;
-            this.lbTipoUsuario.Location = new System.Drawing.Point(301, 73);
+            this.lbTipoUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.lbTipoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTipoUsuario.Location = new System.Drawing.Point(279, 73);
             this.lbTipoUsuario.Name = "lbTipoUsuario";
-            this.lbTipoUsuario.Size = new System.Drawing.Size(35, 13);
+            this.lbTipoUsuario.Size = new System.Drawing.Size(41, 13);
             this.lbTipoUsuario.TabIndex = 3;
             this.lbTipoUsuario.Text = "label1";
             // 
             // txtContra
             // 
+            this.txtContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.txtContra.Location = new System.Drawing.Point(380, 113);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(201, 20);
@@ -76,9 +83,11 @@
             // lbContra
             // 
             this.lbContra.AutoSize = true;
-            this.lbContra.Location = new System.Drawing.Point(301, 120);
+            this.lbContra.BackColor = System.Drawing.Color.Transparent;
+            this.lbContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbContra.Location = new System.Drawing.Point(279, 116);
             this.lbContra.Name = "lbContra";
-            this.lbContra.Size = new System.Drawing.Size(67, 13);
+            this.lbContra.Size = new System.Drawing.Size(79, 13);
             this.lbContra.TabIndex = 4;
             this.lbContra.Text = "Contraseña :";
             // 
@@ -92,20 +101,35 @@
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.logosaludpol;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(150, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Presentacion.Properties.Resources.fondo;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(624, 208);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.lbContra);
             this.Controls.Add(this.lbTipoUsuario);
             this.Controls.Add(this.txtContra);
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.cbxTipoUsuario);
+            this.DoubleBuffered = true;
             this.Name = "FrmLogin";
             this.Text = "SaludPol";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +143,7 @@
         private System.Windows.Forms.TextBox txtContra;
         private System.Windows.Forms.Label lbContra;
         private System.Windows.Forms.Button btnIngresar;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

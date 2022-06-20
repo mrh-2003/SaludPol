@@ -15,6 +15,7 @@ namespace Presentacion
     public partial class FrmQuejaPaciente : Form
     {
         int dnipacienteregistrado;
+        List<eDoctor> listaDoctor = new List<eDoctor>();
         public FrmQuejaPaciente(int dni)
         {
 
@@ -22,16 +23,14 @@ namespace Presentacion
             dnipacienteregistrado = dni;
         }
         nCita negcita = new nCita();
-        nDoctor negdoctor = new nDoctor();
-        nPacientes negpacientes = new nPacientes();
         nQueja negqueja = new nQueja();
         private void FrmQuejaPaciente_Load(object sender, EventArgs e)
         {
-            foreach (eDoctor doctor in negdoctor.ListarDoctores())
+            foreach (eCita cita in negcita.ListarCita().FindAll(x => x.paciente.dnipaciente == dnipacienteregistrado))
             {
-                comboBoxnombredoctores.Items.Add(doctor);
+                listaDoctor.Add(cita.doctorasignado);
             }
-            
+            comboBoxnombredoctores.DataSource = listaDoctor;
         }
         private void Limpiar()
         {
@@ -42,23 +41,10 @@ namespace Presentacion
         {
             if (comboBoxnombredoctores.SelectedIndex != -1 && textBoxquejaaingresar.Text != "")
             {
-                bool quejavalida = false;
                 eDoctor itemdoctor = (eDoctor)comboBoxnombredoctores.SelectedItem;
-                foreach (eCita cita in negcita.ListarCita())
-                {
-                    if (cita.paciente.dnipaciente == dnipacienteregistrado && itemdoctor.nrocolegiatura == cita.doctorasignado.nrocolegiatura) quejavalida = true;
-                }
-                if (quejavalida == true)
-                {
-                    negqueja.insertarQueja(itemdoctor.nrocolegiatura, textBoxquejaaingresar.Text);
-                    Limpiar();
-                    MessageBox.Show("Se registro exitosamente la queja al doctor " + itemdoctor.nombre + " " + itemdoctor.apellido);
-                }
-                if (quejavalida == false)
-                {
-                    Limpiar();
-                    MessageBox.Show("El sistema indica que no ha tenido ninguna cita con el médico, la queja no se ingresará");
-                }
+                negqueja.insertarQueja(itemdoctor.nrocolegiatura, textBoxquejaaingresar.Text);
+                Limpiar();
+                MessageBox.Show("Se registro exitosamente la queja al doctor " + itemdoctor.nombre + " " + itemdoctor.apellido);
             }
             else
             {

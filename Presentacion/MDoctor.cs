@@ -41,9 +41,9 @@ namespace Presentacion
             {
                 switch (comboBoxespecialidad.SelectedIndex)
                 {
-                    case 0: negdoctor.InsertarDoctor(Convert.ToInt32(textBoxcolegiatura.Text), textBoxnombre.Text, textBoxapellido.Text, textBoxcontra.Text, Convert.ToInt32(textBoxtelef.Text), 1, 0); break;
-                    case 1: negdoctor.InsertarDoctor(Convert.ToInt32(textBoxcolegiatura.Text), textBoxnombre.Text, textBoxapellido.Text, textBoxcontra.Text, Convert.ToInt32(textBoxtelef.Text), 2, 0); break;
-                    case 2: negdoctor.InsertarDoctor(Convert.ToInt32(textBoxcolegiatura.Text), textBoxnombre.Text, textBoxapellido.Text, textBoxcontra.Text, Convert.ToInt32(textBoxtelef.Text), 3, 0); break;
+                    case 0: negdoctor.InsertarDoctor(Convert.ToInt32(textBoxcolegiatura.Text), textBoxnombre.Text, textBoxapellido.Text, textBoxcontra.Text, Convert.ToInt32(textBoxtelef.Text), 1); break;
+                    case 1: negdoctor.InsertarDoctor(Convert.ToInt32(textBoxcolegiatura.Text), textBoxnombre.Text, textBoxapellido.Text, textBoxcontra.Text, Convert.ToInt32(textBoxtelef.Text), 2); break;
+                    case 2: negdoctor.InsertarDoctor(Convert.ToInt32(textBoxcolegiatura.Text), textBoxnombre.Text, textBoxapellido.Text, textBoxcontra.Text, Convert.ToInt32(textBoxtelef.Text), 3); break;
                     default:
                         break;
                 }
@@ -85,9 +85,9 @@ namespace Presentacion
                 {
                     switch (comboBoxespecialidad.SelectedIndex)
                     {
-                        case 0: negdoctor.ActualizarDoctor(nrocolegseleccionado, textBoxnombre.Text, textBoxapellido.Text, textBoxcontra.Text, Convert.ToInt32(textBoxtelef.Text), 1, 0); break;
-                        case 1: negdoctor.ActualizarDoctor(nrocolegseleccionado, textBoxnombre.Text, textBoxapellido.Text, textBoxcontra.Text, Convert.ToInt32(textBoxtelef.Text), 2, 0); break;
-                        case 2: negdoctor.ActualizarDoctor(nrocolegseleccionado, textBoxnombre.Text, textBoxapellido.Text, textBoxcontra.Text, Convert.ToInt32(textBoxtelef.Text), 3, 0); break;
+                        case 0: negdoctor.ActualizarDoctor(nrocolegseleccionado, textBoxnombre.Text, textBoxapellido.Text, textBoxcontra.Text, Convert.ToInt32(textBoxtelef.Text), 1); break;
+                        case 1: negdoctor.ActualizarDoctor(nrocolegseleccionado, textBoxnombre.Text, textBoxapellido.Text, textBoxcontra.Text, Convert.ToInt32(textBoxtelef.Text), 2); break;
+                        case 2: negdoctor.ActualizarDoctor(nrocolegseleccionado, textBoxnombre.Text, textBoxapellido.Text, textBoxcontra.Text, Convert.ToInt32(textBoxtelef.Text), 3); break;
                         default:
                             break;
                     }

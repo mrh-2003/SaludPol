@@ -16,16 +16,29 @@ namespace Presentacion
     public partial class FrmPacientes : Form
     {
         nCita datoscita;
+        nDoctor datosDoctor;
+        bool seCargo;
         private int dnipaciente;
         public FrmPacientes(int dniPaciente)
         {
             InitializeComponent();
             datoscita = new nCita();
+            datosDoctor = new nDoctor();
             dnipaciente = dniPaciente;
+            seCargo = false;
         }
         void mostrarDatos()
         {
             dgvListarCitas.DataSource = datoscita.ListarCita().FindAll(x => x.paciente.dnipaciente == dnipaciente);
+        }
+
+        void cargarComboBox()
+        {
+            cbxDoctor.DisplayMember = "nombre";
+            cbxDoctor.DataSource = datosDoctor.ListarDoctores();
+            cbxNCole.DisplayMember = "nrocolegiatura";
+            cbxNCole.DataSource = datosDoctor.ListarDoctores();
+            seCargo = true;
         }
 
         public void limpiar()
@@ -48,6 +61,28 @@ namespace Presentacion
             }
             else
                 MessageBox.Show("Debe completar todos los campos");
+        }
+
+        private void btnQueja_Click(object sender, EventArgs e)
+        {
+            (new FrmQuejaPaciente(dnipaciente)).ShowDialog();
+        }
+
+        private void cbxNCole_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbxDoctor.SelectedIndex = cbxNCole.SelectedIndex;
+        }
+
+        private void cbxDoctor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(seCargo)
+                cbxNCole.SelectedIndex = cbxDoctor.SelectedIndex;
+        }
+
+        private void FrmPacientes_Load(object sender, EventArgs e)
+        {
+            mostrarDatos();
+            cargarComboBox();
         }
     }
 }
