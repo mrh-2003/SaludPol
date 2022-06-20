@@ -16,7 +16,7 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RDiagnosticosMasComunes());
+            Application.Run(new RAfluencia());
             //Application.Run(new RMedicosMasActivos());
         }
     }

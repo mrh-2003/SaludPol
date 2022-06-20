@@ -28,8 +28,11 @@ namespace Presentacion
             foreach (eDiagnostico diagnos in nDiagnostico.ListarTodo())
             {
                 diagnos.CantidadRepeticion = ncita.ListarCita().FindAll(x => x.diagnostico.iddiagnostico == diagnos.iddiagnostico).Count;
-                Nombres.Add(diagnos.nombre);
-                Valores.Add(diagnos.CantidadRepeticion);
+                if (diagnos.CantidadRepeticion > 0)
+                {
+                    Nombres.Add(diagnos.nombre);
+                    Valores.Add(diagnos.CantidadRepeticion);
+                }
             }
             chart1.Titles.Add("Diagnosticos más comunes");
             chart1.Series[0].Points.DataBindXY(Nombres, Valores);

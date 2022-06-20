@@ -27,11 +27,11 @@ namespace Presentacion
         {
             foreach (eTratamientoCancer tratamiento in nTratamiento.ListarTratamientos())
             {
-                nombreTrata.Add(tratamiento.nombre);
-            }
-            foreach (eTratamientoCancer trata in nTratamiento.ListarTratamientos())
-            {
-                numeropacientes.Add(trata.nropaccurados);
+                if (tratamiento.nropaccurados > 0)
+                {
+                    nombreTrata.Add(tratamiento.nombre);
+                    numeropacientes.Add(tratamiento.nropaccurados);
+                }
             }
 
             chartTratamientos.Titles.Add("Eficacia de los tratamientos");
