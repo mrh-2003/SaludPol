@@ -30,7 +30,7 @@ namespace Presentacion
 
         void mostrarcita()
         {
-            dataCita.DataSource =  datosCitas.ListarCita(); // solo del doctor 
+            dataCita.DataSource =  datosCitas.ListarCita().FindAll(x => x.doctorasignado.nrocolegiatura == nrocol); // solo del doctor 
         }
         void limpiar()
         {
