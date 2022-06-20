@@ -77,6 +77,7 @@
             this.txtContra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.txtContra.Location = new System.Drawing.Point(380, 113);
             this.txtContra.Name = "txtContra";
+            this.txtContra.PasswordChar = '*';
             this.txtContra.Size = new System.Drawing.Size(201, 20);
             this.txtContra.TabIndex = 2;
             // 

@@ -33,7 +33,11 @@ namespace Presentacion
             adminsitradores = datosAdministrador.ListarAdministradores();
             pacientes = datosPaciente.ListarPacientes();
         }
-
+        void limpiar()
+        {
+            txtUsuario.Clear();
+            txtContra.Clear();
+        }
         private void FrmLogin_Load(object sender, EventArgs e)
         {
             cbxTipoUsuario.SelectedIndex = 0;
@@ -88,6 +92,7 @@ namespace Presentacion
                     }
                     break;
             }
+            limpiar();
         }
     }
 }

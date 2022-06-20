@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataPaciente = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataPaciente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,7 +184,7 @@
             // dataPaciente
             // 
             this.dataPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataPaciente.Location = new System.Drawing.Point(35, 332);
+            this.dataPaciente.Location = new System.Drawing.Point(42, 332);
             this.dataPaciente.Margin = new System.Windows.Forms.Padding(2);
             this.dataPaciente.Name = "dataPaciente";
             this.dataPaciente.RowHeadersWidth = 51;
@@ -193,12 +194,25 @@
             this.dataPaciente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataPaciente_CellContentClick);
             this.dataPaciente.SelectionChanged += new System.EventHandler(this.dataPaciente_SelectionChanged);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(71, 9);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(288, 23);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "MANTENIMINETO PACIENTE";
+            // 
             // MPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Presentacion.Properties.Resources.fondo;
             this.ClientSize = new System.Drawing.Size(419, 521);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.dataPaciente);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -238,5 +252,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataPaciente;
+        private System.Windows.Forms.Label label6;
     }
 }

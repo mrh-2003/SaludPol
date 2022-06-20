@@ -41,6 +41,7 @@
             this.doctoresPorCadaEspecialidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagnósticosMásComunesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eficaciaDeTratamientosEnPacientesConCáncerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             this.reportesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(434, 24);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -149,13 +150,25 @@
             this.eficaciaDeTratamientosEnPacientesConCáncerToolStripMenuItem.Text = "Eficacia de tratamientos en pacientes con cáncer";
             this.eficaciaDeTratamientosEnPacientesConCáncerToolStripMenuItem.Click += new System.EventHandler(this.eficaciaDeTratamientosEnPacientesConCáncerToolStripMenuItem_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(44, 77);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(342, 42);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "ADMINISTRADOR";
+            // 
             // FrmAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Presentacion.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 260);
+            this.ClientSize = new System.Drawing.Size(434, 196);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
@@ -183,5 +196,6 @@
         private System.Windows.Forms.ToolStripMenuItem diagnósticosMásComunesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eficaciaDeTratamientosEnPacientesConCáncerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem especialidadToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
     }
 }

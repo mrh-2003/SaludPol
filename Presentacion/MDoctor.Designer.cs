@@ -52,7 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(53, 87);
+            this.label1.Location = new System.Drawing.Point(26, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 13);
             this.label1.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(53, 126);
+            this.label2.Location = new System.Drawing.Point(26, 125);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 1;
@@ -72,7 +72,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(53, 166);
+            this.label3.Location = new System.Drawing.Point(26, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(53, 208);
+            this.label4.Location = new System.Drawing.Point(26, 207);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
             this.label4.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(53, 250);
+            this.label5.Location = new System.Drawing.Point(26, 249);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 4;
@@ -102,7 +102,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(53, 291);
+            this.label6.Location = new System.Drawing.Point(26, 290);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(67, 13);
             this.label6.TabIndex = 5;
@@ -111,7 +111,7 @@
             // textBoxcolegiatura
             // 
             this.textBoxcolegiatura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.textBoxcolegiatura.Location = new System.Drawing.Point(215, 80);
+            this.textBoxcolegiatura.Location = new System.Drawing.Point(188, 79);
             this.textBoxcolegiatura.Name = "textBoxcolegiatura";
             this.textBoxcolegiatura.Size = new System.Drawing.Size(114, 20);
             this.textBoxcolegiatura.TabIndex = 6;
@@ -119,7 +119,7 @@
             // textBoxnombre
             // 
             this.textBoxnombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.textBoxnombre.Location = new System.Drawing.Point(215, 119);
+            this.textBoxnombre.Location = new System.Drawing.Point(188, 118);
             this.textBoxnombre.Name = "textBoxnombre";
             this.textBoxnombre.Size = new System.Drawing.Size(114, 20);
             this.textBoxnombre.TabIndex = 7;
@@ -127,7 +127,7 @@
             // textBoxapellido
             // 
             this.textBoxapellido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.textBoxapellido.Location = new System.Drawing.Point(215, 163);
+            this.textBoxapellido.Location = new System.Drawing.Point(188, 162);
             this.textBoxapellido.Name = "textBoxapellido";
             this.textBoxapellido.Size = new System.Drawing.Size(114, 20);
             this.textBoxapellido.TabIndex = 8;
@@ -135,7 +135,7 @@
             // textBoxcontra
             // 
             this.textBoxcontra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.textBoxcontra.Location = new System.Drawing.Point(215, 205);
+            this.textBoxcontra.Location = new System.Drawing.Point(188, 204);
             this.textBoxcontra.Name = "textBoxcontra";
             this.textBoxcontra.Size = new System.Drawing.Size(114, 20);
             this.textBoxcontra.TabIndex = 9;
@@ -143,7 +143,7 @@
             // textBoxtelef
             // 
             this.textBoxtelef.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.textBoxtelef.Location = new System.Drawing.Point(215, 247);
+            this.textBoxtelef.Location = new System.Drawing.Point(188, 246);
             this.textBoxtelef.Name = "textBoxtelef";
             this.textBoxtelef.Size = new System.Drawing.Size(114, 20);
             this.textBoxtelef.TabIndex = 10;
@@ -155,7 +155,7 @@
             "Oncologia",
             "Traumatologia",
             "Pediatria"});
-            this.comboBoxespecialidad.Location = new System.Drawing.Point(215, 291);
+            this.comboBoxespecialidad.Location = new System.Drawing.Point(188, 290);
             this.comboBoxespecialidad.Name = "comboBoxespecialidad";
             this.comboBoxespecialidad.Size = new System.Drawing.Size(114, 21);
             this.comboBoxespecialidad.TabIndex = 11;
@@ -163,7 +163,7 @@
             // dataGridViewdoctor
             // 
             this.dataGridViewdoctor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewdoctor.Location = new System.Drawing.Point(416, 80);
+            this.dataGridViewdoctor.Location = new System.Drawing.Point(343, 79);
             this.dataGridViewdoctor.Name = "dataGridViewdoctor";
             this.dataGridViewdoctor.Size = new System.Drawing.Size(406, 232);
             this.dataGridViewdoctor.TabIndex = 12;
@@ -172,16 +172,17 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label7.Location = new System.Drawing.Point(278, 23);
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(262, 19);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(257, 25);
+            this.label7.Size = new System.Drawing.Size(292, 25);
             this.label7.TabIndex = 13;
-            this.label7.Text = "Mantenimiento del Doctor";
+            this.label7.Text = "MANTENIMIENTO DOCTOR";
             // 
             // buttoninsertar
             // 
-            this.buttoninsertar.Location = new System.Drawing.Point(416, 328);
+            this.buttoninsertar.Location = new System.Drawing.Point(343, 327);
             this.buttoninsertar.Name = "buttoninsertar";
             this.buttoninsertar.Size = new System.Drawing.Size(99, 23);
             this.buttoninsertar.TabIndex = 14;
@@ -191,7 +192,7 @@
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(564, 328);
+            this.btnModificar.Location = new System.Drawing.Point(491, 327);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(104, 23);
             this.btnModificar.TabIndex = 15;
@@ -201,7 +202,7 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(715, 328);
+            this.btnEliminar.Location = new System.Drawing.Point(642, 327);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(107, 23);
             this.btnEliminar.TabIndex = 16;
@@ -215,7 +216,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Presentacion.Properties.Resources.fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(879, 379);
+            this.ClientSize = new System.Drawing.Size(810, 379);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.buttoninsertar);

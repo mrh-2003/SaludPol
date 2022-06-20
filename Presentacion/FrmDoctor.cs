@@ -17,18 +17,20 @@ namespace Presentacion
     {
         eCita citaseleccionado;
         nCita datosCitas;
+        eDiagnostico diagnosticoseleccionado;
         int nrocol;
         public FrmDoctor(int nrocol)
         {
             InitializeComponent();
             citaseleccionado = null;
+            diagnosticoseleccionado = null;
             datosCitas = new nCita();
             this.nrocol = nrocol;
         }
 
         void mostrarcita()
         {
-            dataCita.DataSource =  datosCitas.ListarCita();
+            dataCita.DataSource =  datosCitas.ListarCita(); // solo del doctor 
         }
         void limpiar()
         {
@@ -37,19 +39,21 @@ namespace Presentacion
             textBoxDNI.Clear();
         }
 
-        void cargarTratamientos()
+        void cargarcombobox()
         {
             cbxTratamientos.DataSource = (new nTratamientoCancer()).ListarTratamientos();
+            cbxDiagnos.DataSource = (new nDiagnostico()).ListarTodo();
         }
         private void FrmDoctor_Load(object sender, EventArgs e)
         {
-            cargarTratamientos();
+            cargarcombobox();
+            
             mostrarcita();
         }
 
         void desactivarPanel1()
         {
-            if (datosCitas.ListarCita().Exists(cita => cita.paciente.dnipaciente == pacienteseleccionado.dnipaciente && cita.diagnostico.nombre == "Cancer"))
+            if (citaseleccionado.diagnostico.nombre == "Cancer")
                 pnlCancer.Enabled = true;
             else
                 pnlCancer.Enabled = false;
@@ -70,24 +74,13 @@ namespace Presentacion
                 {
                     (new nTratamientoCancer()).ActualizarTratamiento(tratamiento.idtratamiento, (new nTratamientoCancer()).ListarTratamientos().Find(trat => trat.idtratamiento == tratamiento.idtratamiento).nropaccurados + 1, cbxTratamientos.Text);
                     limpiarTratamientos();
+                    limpiar();
                 }
             }
             else
             {
                 MessageBox.Show("Debes llenar todo los espacios");
             }
-        }
-
-        private void dataPaciente_SelectionChanged(object sender, EventArgs e)
-        {
-            citaseleccionado = (eCita)dataCita.CurrentRow.DataBoundItem;
-            if (citaseleccionado != null)
-            {
-                textBoxDNI.Text = citaseleccionado.paciente.dnipaciente.ToString();
-                textBoxNombres.Text = citaseleccionado.paciente.nombre;
-                textBoxApellidos.Text = citaseleccionado.paciente.apellido;
-            }
-            desactivarPanel1();
         }
 
         private void btnDiag_Click(object sender, EventArgs e)
@@ -101,22 +94,31 @@ namespace Presentacion
             {
                 if (cbxDiagnos.SelectedIndex != - 1)
                 {
-                    MessageBox.Show(datosCitas.ActualizarCita());
+                    MessageBox.Show(datosCitas.ActualizarCita(citaseleccionado.idcita, citaseleccionado.paciente.dnipaciente, citaseleccionado.doctorasignado.nrocolegiatura, citaseleccionado.fecha, citaseleccionado.hora, diagnosticoseleccionado.iddiagnostico));
                     mostrarcita();
+                    limpiar();
                 }
             }
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private void cbxDiagnos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            diagnosticoseleccionado = (eDiagnostico)cbxDiagnos.SelectedItem;
+        }
+
+        private void dataCita_SelectionChanged(object sender, EventArgs e)
+        {
+            citaseleccionado = (eCita)dataCita.CurrentRow.DataBoundItem;
             if (citaseleccionado != null)
             {
-                if (textBoxNombres.Text != "" && textBoxDNI.Text != "" && textBoxApellidos.Text != "" )
-                {
-                    MessageBox.Show(gp.ActualizarPacientes(citaseleccionado.dnipaciente, textBoxNombres.Text, textBoxApellidos.Text, citaseleccionado.fechadenacimiento, Convert.ToInt32(textBoxTelefono.Text)));
-                    mostrarcita();
-                }
+                textBoxDNI.Text = citaseleccionado.paciente.dnipaciente.ToString();
+                textBoxNombres.Text = citaseleccionado.paciente.nombre;
+                textBoxApellidos.Text = citaseleccionado.paciente.apellido;
+                cbxHora.Text = citaseleccionado.hora.Hours.ToString();
+                cbxMinutos.Text = citaseleccionado.hora.Minutes.ToString();
+                dtpFecha.Value = citaseleccionado.fecha;
             }
-        }        
+            desactivarPanel1();
+        }
     }
 }
