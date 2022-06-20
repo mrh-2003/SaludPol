@@ -5,12 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Data.SqlClient;
-using Entidades;
 
 namespace Datos
 {
-    using System.Data.SqlClient;
-    using Entidades;
     public class DataBase
     {
         private SqlConnection conexion;

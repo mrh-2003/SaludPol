@@ -13,9 +13,8 @@ namespace Presentacion
 {
     public partial class RDiagnosticosMasComunes : Form
     {
-        private nDiagnostico nDiagnostico = new nDiagnostico();
-        int valorMasRepetido = -1;
         private nCita ncita = new nCita();
+        private nDiagnostico nDiagnostico = new nDiagnostico();
         List<string> Nombres = new List<string>();
         List<int> Valores = new List<int>();
 
@@ -28,31 +27,10 @@ namespace Presentacion
         {
             foreach (eDiagnostico diagnos in nDiagnostico.ListarTodo())
             {
-                foreach (eCita cita in ncita.ListarCita())
-                {
-                    if (cita.diagnostico.nombre == diagnos.nombre)
-                    {
-                        diagnos.CantidadRepeticion++;
-                    }
-                }
-
+                diagnos.CantidadRepeticion = ncita.ListarCita().FindAll(x => x.diagnostico.iddiagnostico == diagnos.iddiagnostico).Count;
+                Nombres.Add(diagnos.nombre);
+                Valores.Add(diagnos.CantidadRepeticion);
             }
-            foreach (eDiagnostico diag in nDiagnostico.ListarTodo())
-            {
-                if (valorMasRepetido < diag.CantidadRepeticion)
-                {
-                    valorMasRepetido = diag.CantidadRepeticion;
-                }
-            }
-            foreach (eDiagnostico diag in nDiagnostico.ListarTodo())
-            {
-                if (valorMasRepetido == diag.CantidadRepeticion)
-                {
-                    Nombres.Add(diag.nombre);
-                    Valores.Add(valorMasRepetido);
-                }
-            }
-            
             chart1.Titles.Add("Diagnosticos más comunes");
             chart1.Series[0].Points.DataBindXY(Nombres, Valores);
         }
