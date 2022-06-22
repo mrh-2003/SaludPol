@@ -47,7 +47,7 @@
             // 
             this.lsQuejas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
             this.lsQuejas.FormattingEnabled = true;
-            this.lsQuejas.Location = new System.Drawing.Point(24, 92);
+            this.lsQuejas.Location = new System.Drawing.Point(12, 92);
             this.lsQuejas.Name = "lsQuejas";
             this.lsQuejas.Size = new System.Drawing.Size(764, 238);
             this.lsQuejas.TabIndex = 1;

@@ -26,6 +26,8 @@ namespace Presentacion
             datosDoctor = new nDoctor();
             dnipaciente = dniPaciente;
             seCargo = false;
+            dtpFecha.Format = DateTimePickerFormat.Custom;
+            dtpFecha.CustomFormat = "dd - MMMM - yyyy";
         }
         void mostrarDatos()
         {
@@ -55,9 +57,16 @@ namespace Presentacion
         {
             if (cbxNCole.SelectedIndex != -1 && cbxMinutos.SelectedIndex != -1 && cbxHora.SelectedIndex != -1)
             {
-                MessageBox.Show(datoscita.InsertarCita(dnipaciente, Convert.ToInt32(cbxNCole.Text), dtpFecha.Value, (new TimeSpan(Convert.ToInt32(cbxHora.Text))), 0)); //El 0 significa que aun no hay diagnostico
-                mostrarDatos();
-                limpiar();
+                if ((new nCita()).ListarCita().Exists(x => x.doctorasignado.nrocolegiatura == Convert.ToInt32(cbxNCole.Text) && x.fecha.Date == dtpFecha.Value.Date && x.hora == (new TimeSpan(Convert.ToInt32(cbxHora.Text), Convert.ToInt32(cbxMinutos.Text), 0))))
+                {
+                    MessageBox.Show("Este horario ya fue tomado");
+                }
+                else
+                {
+                    MessageBox.Show(datoscita.InsertarCita(dnipaciente, Convert.ToInt32(cbxNCole.Text), dtpFecha.Value, (new TimeSpan(Convert.ToInt32(cbxHora.Text), Convert.ToInt32(cbxMinutos.Text), 0)), 0)); //El 0 significa que aun no hay diagnostico
+                    mostrarDatos();
+                    limpiar();
+                }
             }
             else
                 MessageBox.Show("Debe completar todos los campos");
@@ -83,6 +92,7 @@ namespace Presentacion
         {
             mostrarDatos();
             cargarComboBox();
+            limpiar();
         }
     }
 }

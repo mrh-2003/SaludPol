@@ -31,6 +31,7 @@
             this.pnlCancer = new System.Windows.Forms.Panel();
             this.cbxTratamientos = new System.Windows.Forms.ComboBox();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cbxPacienteCurado = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -42,22 +43,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlDiag = new System.Windows.Forms.Panel();
             this.cbxDiagnos = new System.Windows.Forms.ComboBox();
             this.btnRegistrarDiag = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.cbxMinutos = new System.Windows.Forms.ComboBox();
             this.cbxHora = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.pnlCancer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCita)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlDiag.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlCancer
@@ -76,6 +76,7 @@
             // 
             // cbxTratamientos
             // 
+            this.cbxTratamientos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxTratamientos.FormattingEnabled = true;
             this.cbxTratamientos.Location = new System.Drawing.Point(137, 55);
             this.cbxTratamientos.Name = "cbxTratamientos";
@@ -92,6 +93,16 @@
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(58, 23);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(132, 13);
+            this.label10.TabIndex = 93;
+            this.label10.Text = "TRATAMIENTO CANCER";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -104,6 +115,7 @@
             // 
             // cbxPacienteCurado
             // 
+            this.cbxPacienteCurado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxPacienteCurado.FormattingEnabled = true;
             this.cbxPacienteCurado.Items.AddRange(new object[] {
             "Si",
@@ -140,6 +152,8 @@
             this.dataCita.Location = new System.Drawing.Point(459, 264);
             this.dataCita.Margin = new System.Windows.Forms.Padding(2);
             this.dataCita.Name = "dataCita";
+            this.dataCita.ReadOnly = true;
+            this.dataCita.RowHeadersVisible = false;
             this.dataCita.RowHeadersWidth = 51;
             this.dataCita.RowTemplate.Height = 24;
             this.dataCita.Size = new System.Drawing.Size(313, 170);
@@ -209,17 +223,17 @@
             this.label6.TabIndex = 78;
             this.label6.Text = "DNI";
             // 
-            // panel1
+            // pnlDiag
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.cbxDiagnos);
-            this.panel1.Controls.Add(this.btnRegistrarDiag);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Location = new System.Drawing.Point(28, 238);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(275, 121);
-            this.panel1.TabIndex = 96;
+            this.pnlDiag.BackColor = System.Drawing.Color.Transparent;
+            this.pnlDiag.Controls.Add(this.cbxDiagnos);
+            this.pnlDiag.Controls.Add(this.btnRegistrarDiag);
+            this.pnlDiag.Controls.Add(this.label11);
+            this.pnlDiag.Controls.Add(this.label9);
+            this.pnlDiag.Location = new System.Drawing.Point(28, 238);
+            this.pnlDiag.Name = "pnlDiag";
+            this.pnlDiag.Size = new System.Drawing.Size(275, 121);
+            this.pnlDiag.TabIndex = 96;
             // 
             // cbxDiagnos
             // 
@@ -241,6 +255,16 @@
             this.btnRegistrarDiag.UseVisualStyleBackColor = true;
             this.btnRegistrarDiag.Click += new System.EventHandler(this.btnRegistrarDiag_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(73, 17);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(132, 13);
+            this.label11.TabIndex = 93;
+            this.label11.Text = "ASIGNAR DIAGNOSTICO";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -253,15 +277,20 @@
             // 
             // dtpFecha
             // 
+            this.dtpFecha.Enabled = false;
+            this.dtpFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFecha.Location = new System.Drawing.Point(582, 144);
             this.dtpFecha.Name = "dtpFecha";
-            this.dtpFecha.Size = new System.Drawing.Size(141, 20);
+            this.dtpFecha.Size = new System.Drawing.Size(141, 22);
             this.dtpFecha.TabIndex = 100;
             // 
             // cbxMinutos
             // 
             this.cbxMinutos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.cbxMinutos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxMinutos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.cbxMinutos.Enabled = false;
+            this.cbxMinutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxMinutos.FormattingEnabled = true;
             this.cbxMinutos.Items.AddRange(new object[] {
             "0",
@@ -274,7 +303,9 @@
             // cbxHora
             // 
             this.cbxHora.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(182)))), ((int)(((byte)(182)))));
-            this.cbxHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.cbxHora.Enabled = false;
+            this.cbxHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxHora.FormattingEnabled = true;
             this.cbxHora.Items.AddRange(new object[] {
             "7",
@@ -319,26 +350,6 @@
             this.label5.TabIndex = 102;
             this.label5.Text = "Hora";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(58, 23);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(132, 13);
-            this.label10.TabIndex = 93;
-            this.label10.Text = "TRATAMIENTO CANCER";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(73, 17);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(132, 13);
-            this.label11.TabIndex = 93;
-            this.label11.Text = "ASIGNAR DIAGNOSTICO";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -375,7 +386,7 @@
             this.Controls.Add(this.dtpFecha);
             this.Controls.Add(this.cbxMinutos);
             this.Controls.Add(this.cbxHora);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlDiag);
             this.Controls.Add(this.dataCita);
             this.Controls.Add(this.textBoxApellidos);
             this.Controls.Add(this.textBoxNombres);
@@ -394,8 +405,8 @@
             this.pnlCancer.ResumeLayout(false);
             this.pnlCancer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataCita)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlDiag.ResumeLayout(false);
+            this.pnlDiag.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,7 +428,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlDiag;
         private System.Windows.Forms.Button btnRegistrarDiag;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbxDiagnos;

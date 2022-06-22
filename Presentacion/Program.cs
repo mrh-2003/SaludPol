@@ -16,7 +16,7 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDoctor(64598));
+            Application.Run(new MCita());
             //Application.Run(new RMedicosMasActivos());
         }
     }

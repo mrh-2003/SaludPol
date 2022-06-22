@@ -93,26 +93,19 @@ namespace Presentacion
             cbxMinutos.Text = citaSeleccionada.hora.Minutes.ToString();
             dtpFecha.Value = citaSeleccionada.fecha;
         }
-        //public void llenarParaIngresar()
-        //{
-        //    citaSeleccionada.paciente.dnipaciente = Convert.ToInt32(cbxDNIPac.Text);
-        //    citaSeleccionada.doctorasignado.nrocolegiatura =  Convert.ToInt32(cbxNCole.Text ) ;
-        //    citaSeleccionada.diagnostico.iddiagnostico = Convert.ToInt32(cbxIDdiag.Text) ;
-        //    citaSeleccionada.paciente.nombre =  cbxPaci.Text   ;
-        //    citaSeleccionada.doctorasignado.nombre = cbxDoctor.Text ;
-        //    citaSeleccionada.diagnostico.nombre = cbxDiagnos.Text;
-        //    citaSeleccionada.idcita = Convert.ToInt32(txtIDcita.Text );
-        //    citaSeleccionada.hora = new TimeSpan(Convert.ToInt32(cbxHora.Text), Convert.ToInt32(cbxMinutos.Text), 0);
-        //    citaSeleccionada.fecha = dtpFecha.Value;
-        //}
-
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             if (cbxIDdiag.SelectedIndex != -1 && cbxDNIPac.SelectedIndex != -1 && cbxNCole.SelectedIndex != -1 && cbxMinutos.SelectedIndex != -1 && cbxHora.SelectedIndex != -1)
             {
-                MessageBox.Show(ncita.InsertarCita(Convert.ToInt32(cbxDNIPac.Text), Convert.ToInt32(cbxNCole.Text), dtpFecha.Value, (new TimeSpan(Convert.ToInt32(cbxHora.Text), Convert.ToInt32(cbxMinutos.Text), 0)), Convert.ToInt32(cbxIDdiag.Text)));
-                mostrarDatos();
-                limpiar();
+                if((new nCita()).ListarCita().Exists(x=> x.doctorasignado.nrocolegiatura == Convert.ToInt32(cbxNCole.Text) && x.fecha.Date == dtpFecha.Value.Date && x.hora == (new TimeSpan(Convert.ToInt32(cbxHora.Text), Convert.ToInt32(cbxMinutos.Text), 0))))
+                {
+                    MessageBox.Show("Este horario ya fue tomado");
+                } else
+                {
+                    MessageBox.Show(ncita.InsertarCita(Convert.ToInt32(cbxDNIPac.Text), Convert.ToInt32(cbxNCole.Text), dtpFecha.Value, (new TimeSpan(Convert.ToInt32(cbxHora.Text), Convert.ToInt32(cbxMinutos.Text), 0)), Convert.ToInt32(cbxIDdiag.Text)));
+                    mostrarDatos();
+                    limpiar();
+                }
             }
             else
                 MessageBox.Show("Debe completar todos los campos");
@@ -138,11 +131,18 @@ namespace Presentacion
         {
             if (txtIDcita.Text != "")
             {
-                if (MessageBox.Show("Confirmar actualizacion", "Actualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if ((new nCita()).ListarCita().Exists(x => x.doctorasignado.nrocolegiatura == Convert.ToInt32(cbxNCole.Text) && x.idcita != Convert.ToInt32(txtIDcita.Text) && x.fecha.Date == dtpFecha.Value.Date && x.hora == (new TimeSpan(Convert.ToInt32(cbxHora.Text), Convert.ToInt32(cbxMinutos.Text), 0))))
                 {
-                    MessageBox.Show(ncita.ActualizarCita(Convert.ToInt32(txtIDcita.Text), Convert.ToInt32(cbxDNIPac.Text), Convert.ToInt32(cbxNCole.Text), dtpFecha.Value, (new TimeSpan(Convert.ToInt32(cbxHora.Text), Convert.ToInt32(cbxMinutos.Text), 0)), Convert.ToInt32(cbxIDdiag.Text)));
-                    mostrarDatos();
-                    limpiar();
+                    MessageBox.Show("Este horario ya fue tomado");
+                }
+                else
+                {
+                    if (MessageBox.Show("Confirmar actualizacion", "Actualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    {
+                        MessageBox.Show(ncita.ActualizarCita(Convert.ToInt32(txtIDcita.Text), Convert.ToInt32(cbxDNIPac.Text), Convert.ToInt32(cbxNCole.Text), dtpFecha.Value, (new TimeSpan(Convert.ToInt32(cbxHora.Text), Convert.ToInt32(cbxMinutos.Text), 0)), Convert.ToInt32(cbxIDdiag.Text)));
+                        mostrarDatos();
+                        limpiar();
+                    }
                 }
             }
             else

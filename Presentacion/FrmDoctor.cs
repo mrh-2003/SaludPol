@@ -31,12 +31,23 @@ namespace Presentacion
         void mostrarcita()
         {
             dataCita.DataSource =  datosCitas.ListarCita().FindAll(x => x.doctorasignado.nrocolegiatura == nrocol); // solo del doctor 
+            if(dataCita.RowCount == 0)
+            {
+                pnlDiag.Enabled = false;
+                pnlCancer.Enabled = false;
+            }
         }
         void limpiar()
         {
             textBoxNombres.Clear();
             textBoxApellidos.Clear();
             textBoxDNI.Clear();
+
+            cbxDiagnos.SelectedIndex = -1;
+            cbxTratamientos.SelectedIndex = -1;
+            cbxHora.SelectedIndex = -1;
+            cbxMinutos.SelectedIndex = -1;
+            dtpFecha.Value = DateTime.Now;
         }
 
         void cargarcombobox()
@@ -49,6 +60,7 @@ namespace Presentacion
             cargarcombobox();
             
             mostrarcita();
+            limpiar();
         }
 
         void desactivarPanel1()
